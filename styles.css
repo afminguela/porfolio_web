@@ -1,0 +1,116 @@
+/* ==== Variables globales ==== */
+:root {
+  --primary-color: #1ca9c9;
+  --secondary-color: #b19cd9;
+  --accent-color: #7fbbf7;
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+/* ==== Reset rápido ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+body {
+  background-image: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ==== Glass card genérico ==== */
+.glass {
+  background: var(--glass-bg);/* Transparencia base */
+  background-color:linear-gradient(180deg, #efd5ff 100%, #515ada 0%) ;
+  border-radius: 16px;
+  backdrop-filter: blur(16px) saturate(180%); /* Efecto vidrio */
+  -webkit-backdrop-filter: blur(16px) saturate(180%); /* Safari iOS[14] */
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 1.5rem auto;
+  max-width: 960px;
+}
+
+/* ==== Hero ==== */
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn.secondary {
+  background: var(--secondary-color);
+  color: #000;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#menu a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+#burger {
+  display: none;
+  background: none;
+  font-size: 1.75rem;
+  color: #fff;
+  border: none;
+}
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+  }
+  #burger {
+    display: block;
+  }
+}
+
+/* ==== Secciones ==== */
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+.skills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.skills li {
+  background: var(--secondary-color);
+  color: #000;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}

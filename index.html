@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ana Fernández Minguela · Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar glass">
+    <h1>Ana Fernández Minguela</h1>
+    <nav id="menu">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="burger" aria-label="Open Menu">☰</button>
+  </header>
+
+  <section id="hero" class="hero glass">
+    <h2>Product Manager + Full Stack Developer</h2>
+    <p>Especializada en UX/UI y TV Broadcast.</p>
+    <a class="btn primary" href="#contact">Contáctame</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="glass">
+    <h2>Sobre mí</h2>
+    <p><!-- TODO: PERSONALIZAR --></p>
+    <ul class="skills">
+      <li>React</li><li>Node</li><li>Figma</li><li>Python</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="glass">
+    <h2>Proyectos</h2>
+    <div id="projects-grid"></div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="glass">
+    <h2>Testimonios</h2>
+    <blockquote>
+      “Ana lideró la migración a microservicios con brillantez.” — CTO, MediaCorp
+    </blockquote>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="glass">
+    <h2>Contacto</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Mensaje" required></textarea>
+      <button type="submit" class="btn secondary">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="glass">
+    ©<span id="year"></span> Ana Fernández Minguela
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
